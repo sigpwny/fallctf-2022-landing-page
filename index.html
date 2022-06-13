@@ -1,18 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Refresh" content="0; url=https://sigpwny.com/events/fallctf_2022" />
-    <title>Redirecting...</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/fall.js"></script>
 
-    <!-- Discord and other site embed support -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="og:site_name" content="SIGPwny"/>
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Fall CTF"/>
-    <meta property="og:description" content="SIGPwny's Fall CTF is a cybersecurity competition for UIUC students. "/>
+    <meta property="og:title" content="FallCTF"/>
+    <meta property="og:description" content="SIGPwny's Fall CTF is a cybersecurity competition for UIUC students."/>
     <meta property="og:url" content="https://fallctf.sigpwny.com/"/>
+    <meta property="og:image" content="https://fallctf.sigpwny.com/img/pwny.png" />
+    <meta name="theme-color" content="#ed7a31">
 </head>
+
+<body>
+    <section id="home">
+        <h1 id="fallctf">FallCTF 2022</h1>
+        <h2 id="tagline">> </h2>
+        <img id="pwny" src="img/pwny.png" alt="pwny">
+        <a onclick="document.getElementById('about').scrollIntoView();"><i class="arrow"></i></a>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2 class="entry">> What</h2>
+            <div class="line"></div>
+            <p>FallCTF is a 6 hour hacking event for UIUC students hosted by <a href="https://sigpwny.com">SIGPwny</a>.
+                The event is open to all students of all majors and
+                backgrounds. Beginners welcome! There will be a series of cybersecurity related challenges including web
+                hacking, reverse engineering, binary exploitation, and cryptography. Join with a friend for teams of up
+                to 2 people. There will be food, companies, and prizes. Come learn and have fun
+                with us!</p>
+            <h2 class="entry">> When/Where</h2>
+            <div class="line"></div>
+            <p>12pm - 6pm CT, September 24 2022, Siebel Center for Computer Science</p>
+            <p>Join <a href="https://sigpwny.com/discord">our Discord</a> for updates!</p>
+            <h2 class="entry">> Sponsors</h2>
+            <div class="line"></div>
+            <p>Thanks to our sponsors for making FallCTF 2022 happen! If you are interested in being a sponsor,
+                please contact <a href="mailto:sigpwny@gmail.com">sigpwny@gmail.com</a></p>
+            <div>
+                <a href="https://www.imc.com/">
+                    <img class="sponsor" src="img/imc.png" alt="imc"></a>
+                <a class="sponsor" href="https://www.forcepoint.com/">
+                    <img class="sponsor" src="img/forcepoint.svg" alt="forcepoint"></a>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
