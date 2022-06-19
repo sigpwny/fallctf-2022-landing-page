@@ -209,6 +209,38 @@ a {
     max-height: 250px;
   }
 
+}
+
+@media screen and (max-height: 770px) and (max-width: 600px) {
+  /* Make room for bottom address bar on mobile safari */
+  .arrow {
+    bottom: 100px;
+  }
+}
+
+/* Reduce text and other size on small screens */
+@media screen and (max-width: 600px) {
+  .top-nav {
+    padding: 1.5rem 0;
+  }
+
+  #pwny {
+    max-width: 250px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
   /* Convert nav menu to vertical list and send it off to the left */
   .top-nav .nav-menu {
     position: fixed;
@@ -250,41 +282,4 @@ a {
   .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
   }
-
 }
-
-@media screen and (max-height: 770px) and (max-width: 600px) {
-  /* Make room for bottom address bar on mobile safari */
-  .arrow {
-    bottom: 100px;
-  }
-}
-
-/* Reduce text and other size on small screens */
-@media screen and (max-width: 600px) {
-  .top-nav {
-    padding: 1.5rem 0;
-  }
-
-  #pwny {
-    max-width: 250px;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.1;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  
-}
-
