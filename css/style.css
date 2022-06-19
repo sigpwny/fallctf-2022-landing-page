@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -147,28 +148,27 @@ a {
   top: 0;
   z-index: 10;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   background-color: #ed7a31;
   color: black;
   font-family: source-bold;
   font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: black;
+  margin: 0 1rem;
 }
 
 .top-nav > ul {
-  margin: 0 auto;
-  max-width: 60rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   list-style: none;
 }
 
-.top-nav .spacer {
-  flex: 1;
-}
-
 .top-nav > ul > li {
-  color: black;
   margin: 0 1rem;
 }
 
@@ -176,7 +176,20 @@ a {
   color: inherit;
 }
 
-.top-nav .nav-logo {
+.top-nav .hamburger {
+  display: none;
+  margin: 0 1rem;
+}
+
+/* CSS magic to create hambuger */
+.top-nav .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #040303;
 }
 
 /* Don't show arrow to scroll if screen is too short */
@@ -195,6 +208,49 @@ a {
   #pwny {
     max-height: 250px;
   }
+
+  /* Convert nav menu to vertical list and send it off to the left */
+  .top-nav .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    flex-direction: column;
+    background-color: #ed7a31;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  /* If nav menu is enabled, bring it back */
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .top-nav .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  /* Turns hambuger into X */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+
 }
 
 @media screen and (max-height: 770px) and (max-width: 600px) {
@@ -227,3 +283,8 @@ a {
     line-height: 1.1;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  
+}
+
