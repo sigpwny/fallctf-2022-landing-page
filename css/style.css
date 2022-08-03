@@ -136,7 +136,7 @@ a {
   margin: 0.5rem;
   padding: 0.5rem;
   background-color: white;
-  display: inline-block;
+  display: block;
 }
 
 .sponsor > img {
