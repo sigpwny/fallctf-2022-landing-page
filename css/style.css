@@ -219,7 +219,7 @@ a {
 }
 
 /* Reduce text and other size on small screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .top-nav {
     padding: 1.5rem 0;
   }
